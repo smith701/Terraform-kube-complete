@@ -1,7 +1,7 @@
 resource "google_container_cluster" "gcp_kubernetes" {
-  name               = var.cluster_name
-  zone               = var.zone
-  initial_node_count = var.gcp_cluster_count
+  name               = "${var.cluster_name}"
+  zone               = "${var.zone}"
+  initial_node_count = "${var.gcp_cluster_count}"
 
   # additional_zones = [
   #   "us-west1-b",
@@ -9,8 +9,8 @@ resource "google_container_cluster" "gcp_kubernetes" {
   # ]
 
   master_auth {
-    username = var.linux_admin_username
-    password = "${var.linux_admin_password}}"
+    username = "${var.linux_admin_username}"
+    password = "${var.linux_admin_password}"
   }
 
   node_config {
