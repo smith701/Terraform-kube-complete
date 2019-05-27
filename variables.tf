@@ -247,7 +247,3 @@ output "tags" {
 }
 
 
-terraform {
-  backend "local" {
-  }
-}
